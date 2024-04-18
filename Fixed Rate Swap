@@ -1,0 +1,26 @@
+Swap Rate
+
+
+from datetime import datetime, timedelta
+import random
+
+def afficher_tableau_maturite(maturite_annees):
+    start_date = datetime(2024, 4, 1)
+    print(f"{'Start Date':<15}{'End Date':<15}{'Notional':<15}{'Forward Rates (%)':<20}{'Discount Factors':<15}")
+    
+    notional = 5000000  # Montant initial du notional
+    for _ in range(maturite_annees * 12):
+        end_date = start_date + timedelta(days=90)
+        
+        forward_rate = random.uniform(0.5, 4)
+        
+        discount_factor = random.uniform(0.5, 0.9)
+        
+        formatted_notional = "{:,.2f}".format(notional).replace(",", " ").replace(".", ",")
+        print(f"{start_date.strftime('%d/%m/%Y'):<15}{end_date.strftime('%d/%m/%Y'):<15}{formatted_notional:<15}{'':<10}{forward_rate:.2f}%{'':<15}{discount_factor:.2f}%{'':<5}")
+        
+        start_date = end_date
+        
+        notional -= notional / (maturite_annees * 12)
+
+afficher_tableau_maturite(5)
