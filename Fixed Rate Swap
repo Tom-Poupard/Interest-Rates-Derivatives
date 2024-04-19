@@ -13,7 +13,6 @@ def afficher_tableau_maturite(maturite_annees):
         end_date = start_date + timedelta(days=90)
         
         forward_rate = random.uniform(0.5, 4)
-        
         discount_factor = random.uniform(0.5, 0.9)
         
         formatted_notional = "{:,.2f}".format(notional).replace(",", " ").replace(".", ",")
