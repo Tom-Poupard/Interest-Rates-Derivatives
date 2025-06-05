@@ -1,5 +1,4 @@
-#Swap Rate
-#Fix/Floating
+#Swap Rate Fixed-Floating
 
 from datetime import datetime, timedelta
 import random
