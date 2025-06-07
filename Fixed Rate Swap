@@ -18,3 +18,17 @@ def afficher_tableau_maturite(maturite_annees):
         notional -= notional / (maturite_annees * 12)
 
 afficher_tableau_maturite(5)
+
+
+if constatations = "trimestrielles":
+
+
+elif constatations = "semestrielles":
+
+elif constatations = "annuelles":
+
+elif constatations = "in fine":
+
+else:
+    raise ValueError
+
